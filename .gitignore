@@ -5,3 +5,7 @@ PRODUCT.md
 DESIGN.md
 PRE-PUBLICACAO.md
 preparar-entrega.ps1
+
+.vercel
+.env*
+icone base.webp
