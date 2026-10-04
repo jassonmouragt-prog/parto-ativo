@@ -16,6 +16,8 @@ Depois acesse `http://localhost:8080`. Não há dependências nem etapa de build
 
 O projeto é implantado no Vercel a partir deste repositório GitHub. A raiz do repositório é a pasta pública; não é necessário configurar build command nem output directory.
 
+Produção: https://partoativo.vercel.app
+
 ## Arquivos do site
 
 - `index.html`, `styles.css`, `script.js`
