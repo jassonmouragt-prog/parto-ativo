@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <base href="/vsl/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parto Ativo — Aprenda como ter um parto mais rápido e com menos dores</title>
+  <meta name="description" content="Exercícios de mobilidade, técnicas de respiração e ativação e práticas para realizar sozinha ou com seu acompanhante durante a preparação para o trabalho de parto.">
+  <meta property="og:title" content="Parto Ativo — Samia Tolentino">
+  <meta property="og:description" content="Aprenda como se preparar para um parto mais rápido e com menos dores, de maneira simples.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #004AAD;
+      --blue-dark: #003A8A;
+      --blue-light: #E8F0FB;
+      --purple: #CB6CE6;
+      --purple-dark: #A84EC4;
+      --purple-light: #F8EEFC;
+      --dark: #0D1B28;
+      --text: #1A2B3C;
+      --muted: #5A6B7C;
+      --white: #FFFFFF;
+      --bg: #FAFBFD;
+      --cream: #F4F7FB;
+      --radius: 20px;
+      --radius-sm: 14px;
+      --shadow: 0 10px 40px rgba(0, 74, 173, 0.08);
+      --shadow-sm: 0 4px 18px rgba(0, 74, 173, 0.06);
+      --font-title: 'Manrope', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-title);
+      line-height: 1.25;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    img { max-width: 100%; display: block; }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .container-narrow { max-width: 780px; }
+
+    section { padding: 88px 0; }
+
+    .eyebrow {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 12.5px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 4vw, 40px);
+      margin-bottom: 20px;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 640px;
+    }
+
+    .center { text-align: center; }
+    .center .section-sub { margin-left: auto; margin-right: auto; }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      border: none;
+      border-radius: 999px;
+      padding: 18px 42px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+      box-shadow: 0 8px 24px rgba(0, 74, 173, 0.3);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(0, 74, 173, 0.38);
+      filter: brightness(1.06);
+    }
+
+    .btn:focus-visible {
+      outline: 3px solid var(--purple);
+      outline-offset: 3px;
+    }
+
+    .btn-xl { padding: 20px 52px; font-size: 17px; }
+
+    .btn-whatsapp {
+      background: linear-gradient(90deg, #0AC161, #08A854);
+      box-shadow: 0 8px 24px rgba(10, 193, 97, 0.3);
+    }
+
+    .btn-whatsapp:hover {
+      box-shadow: 0 12px 32px rgba(10, 193, 97, 0.38);
+    }
+
+    .microcopy {
+      font-size: 13.5px;
+      color: var(--muted);
+      margin-top: 14px;
+    }
+
+    /* ---------- Barra de progresso ---------- */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      transform-origin: 0 50%;
+      transform: scaleX(0);
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      z-index: 200;
+      pointer-events: none;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      padding: 72px 0 64px;
+      text-align: center;
+    }
+
+    .hero-logo {
+      height: 56px;
+      width: auto;
+      margin: 0 auto 28px;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 4.6vw, 48px);
+      font-weight: 700;
+      max-width: 880px;
+      margin: 0 auto 22px;
+    }
+
+    .hero .subheadline {
+      font-size: 18.5px;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto 44px;
+    }
+
+    .vsl-wrapper {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .vsl-player {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg, var(--dark) 0%, #1A3048 100%);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .vsl-placeholder {
+      color: rgba(255, 255, 255, 0.85);
+      font-family: var(--font-title);
+      font-weight: 600;
+      font-size: clamp(16px, 2.4vw, 22px);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .vsl-play-btn {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.25s ease, transform 0.25s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    .vsl-play-btn:hover { background: rgba(255, 255, 255, 0.26); transform: scale(1.06); }
+
+    .vsl-play-btn svg { width: 28px; height: 28px; fill: #fff; margin-left: 4px; }
+
+    .vsl-embed {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: none;
+    }
+
+    .vsl-embed.active { display: block; }
+
+    .vsl-microcopy {
+      margin-top: 22px;
+      font-size: 15.5px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .hero-cta {
+      margin-top: 34px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      pointer-events: none;
+    }
+
+    .hero-cta.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    /* ---------- Promessa / Identificação ---------- */
+    .promessa { background: var(--cream); }
+
+    .promessa .lead {
+      font-family: var(--font-title);
+      font-size: clamp(24px, 3.4vw, 34px);
+      font-weight: 600;
+      max-width: 720px;
+      margin-bottom: 14px;
+    }
+
+    .promessa .lead-continuation {
+      font-size: 20px;
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+
+    .questions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      max-width: 860px;
+      margin-bottom: 48px;
+    }
+
+    .question-card {
+      background: var(--white);
+      border: 1px solid rgba(0, 74, 173, 0.1);
+      border-radius: var(--radius-sm);
+      padding: 22px 26px;
+      font-family: var(--font-title);
+      font-weight: 600;
+      font-size: 16.5px;
+      box-shadow: var(--shadow-sm);
+      cursor: default;
+      user-select: none;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .question-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+      border-color: rgba(0, 74, 173, 0.25);
+    }
+
+    .promessa .closing {
+      font-family: var(--font-title);
+      font-size: clamp(20px, 2.6vw, 26px);
+      font-weight: 700;
+      color: var(--blue);
+    }
+
+    /* ---------- 3 Pilares ---------- */
+    .pilares { background: var(--cream); }
+
+    .pilares-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .pilar-card {
+      background: var(--white);
+      border: 1px solid rgba(0, 74, 173, 0.1);
+      border-radius: var(--radius);
+      padding: 36px 30px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .pilar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .pilar-image {
+      margin: -36px -30px 24px;
+      overflow: hidden;
+    }
+
+    .pilar-image img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      object-position: center 30%;
+      transition: transform 0.4s ease;
+    }
+
+    .pilar-card:hover .pilar-image img {
+      transform: scale(1.04);
+    }
+
+    .pilar-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue-light), var(--purple-light));
+      color: var(--blue);
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .pilar-card h3 {
+      font-size: 16px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      color: var(--blue);
+    }
+
+    .pilar-card p { font-size: 15.5px; color: var(--muted); }
+
+    /* ---------- Se você deseja ter um parto... ---------- */
+    .desejos {
+      background: linear-gradient(180deg, var(--dark) 0%, #16283C 100%);
+      color: var(--white);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .desejos::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(203, 108, 230, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .desejos .section-title { color: var(--white); }
+
+    .desejos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 720px;
+      margin: 48px auto 48px;
+    }
+
+    .desejo-item {
+      position: relative;
+      padding: 0;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(4px);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .desejo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
+      transition: transform 0.4s ease;
+    }
+
+    .desejo-item:hover {
+      transform: translateY(-4px);
+      border-color: rgba(203, 108, 230, 0.5);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .desejo-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .desejo-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 14px 16px;
+      background: linear-gradient(transparent, rgba(13, 27, 40, 0.85));
+      font-family: var(--font-title);
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .desejos .closing {
+      font-family: var(--font-title);
+      font-size: clamp(20px, 2.8vw, 28px);
+      font-weight: 600;
+      color: var(--purple);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ---------- Apresentação do Parto Ativo ---------- */
+    .produto-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .produto .section-sub { margin-bottom: 32px; }
+
+    .produto .ferramenta {
+      font-family: var(--font-title);
+      font-size: clamp(19px, 2.4vw, 24px);
+      font-weight: 600;
+      color: var(--blue);
+      line-height: 1.5;
+    }
+
+    .produto-mockup {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ---------- O que ela aprende ---------- */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid rgba(0, 74, 173, 0.1);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .card-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--blue-light), var(--purple-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .card-icon svg { width: 22px; height: 22px; stroke: var(--blue); }
+
+    .card h3 {
+      font-size: 15px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .card p { font-size: 15px; color: var(--muted); }
+
+    /* ---------- Super Bônus ---------- */
+    .bonus {
+      background: linear-gradient(135deg, var(--dark) 0%, #1A2E45 50%, #2A1A3A 100%);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bonus::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -20%;
+      width: 60%;
+      height: 160%;
+      background: radial-gradient(ellipse at center, rgba(203, 108, 230, 0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .bonus::after {
+      content: '';
+      position: absolute;
+      bottom: -40%;
+      left: -15%;
+      width: 50%;
+      height: 140%;
+      background: radial-gradient(ellipse at center, rgba(0, 74, 173, 0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .bonus .section-title { color: var(--white); }
+
+    .bonus .section-sub { color: rgba(255, 255, 255, 0.65); }
+
+    .bonus-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      border-radius: 999px;
+      padding: 12px 28px;
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 24px;
+      box-shadow: 0 8px 32px rgba(0, 74, 173, 0.4);
+    }
+
+    .bonus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .bonus-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius);
+      padding: 36px 30px;
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .bonus-card:hover {
+      transform: translateY(-6px);
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(203, 108, 230, 0.4);
+    }
+
+    .bonus-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 20px rgba(0, 74, 173, 0.35);
+    }
+
+    .bonus-icon svg { width: 26px; height: 26px; stroke: var(--white); }
+
+    .bonus-card h3 {
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      color: var(--white);
+    }
+
+    .bonus-card p { font-size: 14.5px; color: rgba(255, 255, 255, 0.6); }
+
+    @media (max-width: 640px) {
+      .bonus-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- Depoimentos ---------- */
+    .depoimentos .section-sub { margin-bottom: 48px; }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .testimonial {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 30px 28px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(0, 74, 173, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .testimonial-video {
+      aspect-ratio: 16 / 9;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, var(--dark), #1A3048);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .testimonial-text {
+      font-size: 15.5px;
+      color: var(--text);
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    /* ---------- Acesso 1 ano ---------- */
+    .acesso {
+      background: linear-gradient(135deg, var(--blue-light) 0%, var(--purple-light) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .acesso::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 50%;
+      height: 160%;
+      background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.6) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .acesso .container { position: relative; z-index: 1; }
+
+    .acesso-card {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0, 74, 173, 0.12);
+      border: 1px solid rgba(0, 74, 173, 0.08);
+      padding: 52px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .acesso-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+    }
+
+    .acesso-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      border-radius: 999px;
+      padding: 12px 26px;
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 24px;
+      box-shadow: 0 6px 20px rgba(0, 74, 173, 0.3);
+    }
+
+    .acesso-card h2 {
+      font-size: clamp(24px, 3.2vw, 32px);
+      margin-bottom: 16px;
+    }
+
+    .acesso-card p {
+      color: var(--muted);
+      font-size: 16.5px;
+    }
+
+    .acesso-features {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+
+    .acesso-feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .acesso-feature svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--blue);
+      flex-shrink: 0;
+    }
+
+    /* ---------- Garantia ---------- */
+    .garantia {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+      color: var(--white);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .garantia::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: -20%;
+      width: 60%;
+      height: 180%;
+      background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .garantia .container { position: relative; z-index: 1; }
+
+    .garantia-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      text-align: left;
+    }
+
+    .garantia-seal {
+      width: 160px;
+      height: auto;
+      flex-shrink: 0;
+      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.25));
+    }
+
+    .garantia-content {
+      flex: 1;
+    }
+
+    .garantia-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+      padding: 12px 26px;
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+
+    .garantia h2 { color: var(--white); font-size: clamp(26px, 3.4vw, 36px); margin-bottom: 18px; }
+
+    .garantia p {
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 560px;
+      margin: 0 auto;
+      font-size: 17px;
+    }
+
+    /* ---------- Oferta ---------- */
+    .oferta-card {
+      max-width: 640px;
+      margin: 48px auto 0;
+      background: var(--white);
+      border-radius: 28px;
+      box-shadow: 0 20px 60px rgba(0, 74, 173, 0.1);
+      border: 1px solid rgba(0, 74, 173, 0.08);
+      padding: 52px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .oferta-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+    }
+
+    .oferta-card h2 { font-size: clamp(26px, 3.4vw, 34px); margin-bottom: 32px; }
+
+    .oferta-list {
+      list-style: none;
+      text-align: left;
+      max-width: 420px;
+      margin: 0 auto 36px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .oferta-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 16px;
+    }
+
+    .oferta-list svg {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      margin-top: 3px;
+      stroke: var(--blue);
+    }
+
+    .price-section {
+      position: relative;
+      margin: 8px auto 36px;
+      max-width: 400px;
+      padding: 36px 32px 30px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, var(--blue-light) 0%, var(--purple-light) 100%);
+      border: 1px solid rgba(0, 74, 173, 0.1);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 12px 36px rgba(0, 74, 173, 0.08);
+    }
+
+    .price-logo {
+      height: 34px;
+      width: auto;
+      margin: 0 auto 14px;
+    }
+
+    .price-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-family: var(--font-title);
+      font-size: clamp(56px, 9vw, 76px);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 14px;
+    }
+
+    .price-installments {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .price-note {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .price-pill {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      color: var(--white);
+      font-family: var(--font-title);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 999px;
+      white-space: nowrap;
+      box-shadow: 0 6px 18px rgba(0, 74, 173, 0.28);
+    }
+
+    /* ---------- WhatsApp ---------- */
+    .whatsapp-section { background: var(--cream); text-align: center; }
+
+    .whatsapp-section h2 { font-size: clamp(24px, 3.2vw, 32px); margin-bottom: 14px; }
+
+    .whatsapp-section p { color: var(--muted); margin-bottom: 32px; }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background: var(--dark);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 56px 0 40px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      height: 48px;
+      width: auto;
+      margin: 0 auto 16px;
+    }
+
+    .footer-brand {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 14.5px;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover { color: var(--purple); }
+
+    .footer-copy { font-size: 13.5px; color: rgba(255, 255, 255, 0.5); margin-bottom: 20px; }
+
+    .footer-disclaimer {
+      font-size: 12.5px;
+      color: rgba(255, 255, 255, 0.4);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ---------- Sticky CTA mobile ---------- */
+    .sticky-cta {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+      padding: 14px 20px calc(14px + env(safe-area-inset-bottom));
+      background: rgba(250, 251, 253, 0.96);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(0, 74, 173, 0.12);
+      transform: translateY(110%);
+      transition: transform 0.35s ease;
+    }
+
+    .sticky-cta.visible { transform: translateY(0); }
+
+    .sticky-cta .btn { width: 100%; padding: 16px 24px; }
+
+    /* ---------- Animações de entrada ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.in { opacity: 1; transform: translateY(0); }
+
+    /* ---------- Responsivo ---------- */
+    @media (max-width: 860px) {
+      section { padding: 64px 0; }
+      .hero { padding: 48px 0 48px; }
+      .produto-grid { grid-template-columns: 1fr; gap: 40px; }
+      .desejos-grid { grid-template-columns: repeat(2, 1fr); }
+      .oferta-card { padding: 40px 26px; }
+      .acesso-card { padding: 36px 26px; }
+    }
+
+    @media (max-width: 640px) {
+      .garantia-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 28px;
+      }
+
+      .garantia-seal {
+        width: 120px;
+      }
+
+      .garantia-content {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .desejos-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .desejo-item { padding: 18px 12px; font-size: 14px; }
+    }
+
+    @media (min-width: 861px) {
+      .sticky-cta { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Progresso da leitura" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- ============ 01. HERO + VSL ============ -->
+  <header class="hero">
+    <div class="container">
+      <img src="Logo Partoativo.png" alt="Parto Ativo" class="hero-logo">
+      <h1>Aprenda como se preparar para um parto <span class="gradient-text">mais rápido</span> e com <span class="gradient-text">menos dores</span>, de maneira simples.</h1>
+      <p class="subheadline">Exercícios de mobilidade, técnicas de respiração e ativação e práticas para realizar sozinha ou com seu acompanhante durante a preparação para o trabalho de parto.</p>
+
+      <div class="vsl-wrapper">
+        <div class="vsl-player" id="vslPlayer">
+          <div class="vsl-placeholder" id="vslPlaceholder">
+            <button class="vsl-play-btn" id="vslPlayBtn" aria-label="Reproduzir vídeo">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <span>VSL — Parto Ativo</span>
+          </div>
+          <!-- Substitua o src abaixo pelo embed real da VSL -->
+          <iframe id="vslEmbed" class="vsl-embed" src="" title="VSL Parto Ativo" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <p class="vsl-microcopy">Dê o play e assista com atenção. Essa preparação pode mudar a forma como você enxerga o trabalho de parto.</p>
+      </div>
+
+      <div class="hero-cta" id="heroCta">
+        <a class="btn btn-xl" href="https://pay.hotmart.com/W79517181N?off=9f0wvm5w" target="_blank" rel="noopener">Quero conhecer o Parto Ativo</a>
+        <p class="microcopy">Acesso online • Compra segura pela Hotmart • 7 dias de garantia</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Âncora para o sticky CTA mobile -->
+    <div id="vslEndAnchor" aria-hidden="true"></div>
+
+    <!-- ============ 03. PROMESSA / IDENTIFICAÇÃO ============ -->
+    <section class="promessa">
+      <div class="container container-narrow">
+        <h2 class="lead reveal">Talvez hoje a sua maior preocupação não seja o parto em si…</h2>
+        <p class="lead-continuation reveal">…mas não saber como você vai reagir quando ele começar.</p>
+
+        <div class="questions">
+          <div class="question-card reveal">Como respirar quando as contrações começarem?</div>
+          <div class="question-card reveal">Como me movimentar?</div>
+          <div class="question-card reveal">Que posição posso experimentar?</div>
+          <div class="question-card reveal">Como meu acompanhante pode ajudar?</div>
+          <div class="question-card reveal">Como manter a calma?</div>
+          <div class="question-card reveal">Como entender melhor o que meu corpo está fazendo?</div>
+        </div>
+
+        <p class="closing reveal">É por isso que preparação importa.</p>
+      </div>
+    </section>
+
+    <!-- ============ 05-07. OS 3 PILARES ============ -->
+    <section class="pilares">
+      <div class="container">
+        <div class="center">
+          <h2 class="section-title reveal">Prepare seu corpo para o grande dia.</h2>
+          <p class="section-sub reveal">O Parto Ativo reúne exercícios e técnicas que podem fazer parte da sua preparação ao longo da gestação e durante o trabalho de parto.</p>
+        </div>
+        <div class="pilares-grid">
+          <div class="pilar-card reveal">
+            <div class="pilar-image">
+              <img src="exercicios mobilidade.jpeg" alt="Exercícios de mobilidade" loading="lazy">
+            </div>
+            <span class="pilar-number">01</span>
+            <h3>Mobilidade</h3>
+            <p>Exercícios de mobilidade para fazer em toda a sua gestação, que ajudam a preparar o corpo para o grande dia.</p>
+          </div>
+          <div class="pilar-card reveal">
+            <div class="pilar-image">
+              <img src="exercicios respiração.jpeg" alt="Técnicas de respiração e ativação" loading="lazy">
+            </div>
+            <span class="pilar-number">02</span>
+            <h3>Respiração + Ativação</h3>
+            <p>Técnicas de respiração e ativação que vão te ajudar a amenizar as dores durante todo o trabalho de parto.</p>
+          </div>
+          <div class="pilar-card reveal">
+            <div class="pilar-image">
+              <img src="exercicios realizar com seu parceiro.webp" alt="Exercícios com acompanhante" loading="lazy">
+            </div>
+            <span class="pilar-number">03</span>
+            <h3>Com seu acompanhante</h3>
+            <p>Exercícios de mobilidade e manobras para realizar com seu parceiro, acompanhante ou Doula, durante o trabalho de parto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 08-09. SE VOCÊ DESEJA TER UM PARTO... ============ -->
+    <section class="desejos">
+      <div class="container">
+        <h2 class="section-title reveal">Se você deseja viver um parto…</h2>
+        <div class="desejos-grid">
+          <div class="desejo-item reveal">
+            <img src="normal.webp" alt="Parto normal" loading="lazy">
+            <span class="desejo-label">Normal</span>
+          </div>
+          <div class="desejo-item reveal">
+            <img src="natural.webp" alt="Parto natural" loading="lazy">
+            <span class="desejo-label">Natural</span>
+          </div>
+          <div class="desejo-item reveal">
+            <img src="mais rápido.webp" alt="Parto mais rápido" loading="lazy">
+            <span class="desejo-label">Mais rápido</span>
+          </div>
+          <div class="desejo-item reveal">
+            <img src="com menos dores.webp" alt="Parto com menos dores" loading="lazy">
+            <span class="desejo-label">Com menos dores</span>
+          </div>
+          <div class="desejo-item reveal">
+            <img src="humanizado.webp" alt="Parto humanizado" loading="lazy">
+            <span class="desejo-label">Humanizado</span>
+          </div>
+          <div class="desejo-item reveal">
+            <img src="consciente.webp" alt="Parto consciente" loading="lazy">
+            <span class="desejo-label">Consciente</span>
+          </div>
+        </div>
+        <p class="closing reveal">Com o Parto Ativo, você terá a chance de se preparar para viver esse momento.</p>
+      </div>
+    </section>
+
+    <!-- ============ 10. APRESENTAÇÃO DO PARTO ATIVO ============ -->
+    <section class="produto">
+      <div class="container">
+        <div class="produto-grid">
+          <div class="reveal">
+            <span class="eyebrow">O treinamento</span>
+            <h2 class="section-title">Conheça o Parto Ativo.</h2>
+            <p class="section-sub">O Parto Ativo é um treinamento online desenvolvido para ajudar gestantes a entenderem melhor o próprio corpo e aprenderem exercícios, movimentos, posições e técnicas que podem fazer parte da preparação para o trabalho de parto.</p>
+            <p class="ferramenta">Tenha hoje mesmo em suas mãos uma ferramenta poderosíssima para ter o seu tão sonhado parto ativo.</p>
+          </div>
+          <div class="reveal">
+            <img src="mockup parto ativo.png" alt="Mockup do treinamento Parto Ativo" class="produto-mockup" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 11. BENEFÍCIOS / OFERTA ============ -->
+    <section>
+      <div class="container">
+        <div class="center">
+          <h2 class="section-title reveal">O que ela aprende</h2>
+        </div>
+        <div class="cards">
+          <div class="card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <h3>Mobilidade</h3>
+            <p>Movimentos para trabalhar mobilidade e consciência corporal.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c3-4 6-4 9 0s6 4 9 0"/><path d="M3 18c3-4 6-4 9 0s6 4 9 0"/></svg>
+            </div>
+            <h3>Respiração</h3>
+            <p>Técnicas respiratórias para diferentes momentos do trabalho de parto.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="3"/><path d="M12 9v6M8 21l4-6 4 6"/></svg>
+            </div>
+            <h3>Posições</h3>
+            <p>Movimentos e posições que podem ser experimentados durante o processo.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M14 15.5c2.5.3 4.5 2 4.5 4.5"/></svg>
+            </div>
+            <h3>Acompanhante</h3>
+            <p>Práticas que podem ser realizadas com parceiro, acompanhante ou doula.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 12. SUPER BÔNUS ============ -->
+    <section class="bonus">
+      <div class="container">
+        <div class="center">
+          <span class="bonus-badge reveal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Super Bônus
+          </span>
+          <h2 class="section-title reveal">E você ainda recebe…</h2>
+          <p class="section-sub reveal">Tudo isso incluído na sua inscrição.</p>
+        </div>
+        <div class="bonus-grid">
+          <div class="bonus-card reveal">
+            <div class="bonus-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </div>
+            <h3>Playlist para o parto</h3>
+            <p>Playlist Spotify para o parto</p>
+          </div>
+          <div class="bonus-card reveal">
+            <div class="bonus-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+            </div>
+            <h3>Ebook sobre o parto</h3>
+            <p>Material complementar em formato digital</p>
+          </div>
+          <div class="bonus-card reveal">
+            <div class="bonus-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3>Comunidade exclusiva</h3>
+            <p>Comunidade exclusiva de gestantes</p>
+          </div>
+          <div class="bonus-card reveal">
+            <div class="bonus-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+            </div>
+            <h3>Suporte 24 horas</h3>
+            <p>Suporte 24 horas para dúvidas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 13. DEPOIMENTOS ============ -->
+    <section class="depoimentos">
+      <div class="container">
+        <div class="center">
+          <h2 class="section-title reveal">Experiências de quem decidiu se preparar</h2>
+        </div>
+        <div class="testimonials">
+          <div class="testimonial reveal">
+            <div class="testimonial-video">[Depoimento em vídeo 01]</div>
+            <p class="testimonial-text">[Depoimento real 01]</p>
+            <span class="testimonial-author">[Nome]</span>
+          </div>
+          <div class="testimonial reveal">
+            <div class="testimonial-video">[Depoimento em vídeo 02]</div>
+            <p class="testimonial-text">[Depoimento real 02]</p>
+            <span class="testimonial-author">[Nome]</span>
+          </div>
+          <div class="testimonial reveal">
+            <div class="testimonial-video">[Depoimento em vídeo 03]</div>
+            <p class="testimonial-text">[Depoimento real 03]</p>
+            <span class="testimonial-author">[Nome]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 14. ACESSO POR 1 ANO ============ -->
+    <section class="acesso">
+      <div class="container">
+        <div class="acesso-card reveal">
+          <span class="acesso-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Acesso por 1 ano
+          </span>
+          <h2>Acesso à plataforma por 1 ano</h2>
+          <p>Seu acesso à plataforma é de 1 ano e sempre estamos incluindo novas aulas.</p>
+          <div class="acesso-features">
+            <div class="acesso-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Assista onde quiser
+            </div>
+            <div class="acesso-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
+              Novas aulas incluídas
+            </div>
+            <div class="acesso-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              Celular, tablet e computador
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 15. GARANTIA DE 7 DIAS ============ -->
+    <section class="garantia">
+      <div class="container">
+        <div class="garantia-inner reveal">
+          <img src="selo 07 dias.png" alt="Selo de garantia de 7 dias" class="garantia-seal">
+          <div class="garantia-content">
+            <span class="garantia-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Garantia de 7 dias
+            </span>
+            <h2>Conheça o treinamento com tranquilidade.</h2>
+            <p>Se o conteúdo descrito não for o mesmo que você receber, você tem 7 dias de garantia e devolveremos seu dinheiro sem burocracia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 16. OFERTA + CTA ============ -->
+    <section>
+      <div class="container">
+        <div class="oferta-card reveal">
+          <h2>Tenha acesso agora ao Parto Ativo.</h2>
+          <ul class="oferta-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Treinamento completo</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Exercícios de mobilidade</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Técnicas respiratórias</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Movimentos para o trabalho de parto</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Exercícios com acompanhante</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Materiais complementares</li>
+          </ul>
+          <div class="price-section">
+            <span class="price-pill">Acesso por 1 ano</span>
+            <img src="Logo Partoativo.png" alt="Parto Ativo" class="price-logo">
+            <p class="price-label">Investmento único</p>
+            <p class="price">R$ 97</p>
+            <p class="price-installments">Pagamento único</p>
+            <p class="price-note">Acesso à plataforma por 1 ano</p>
+          </div>
+          <a class="btn btn-xl" href="https://pay.hotmart.com/W79517181N?off=9f0wvm5w" target="_blank" rel="noopener">Quero ter acesso ao Parto Ativo</a>
+          <p class="microcopy">Compra processada pela Hotmart.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 17. DÚVIDAS / WHATSAPP ============ -->
+    <section class="whatsapp-section">
+      <div class="container container-narrow">
+        <h2 class="reveal">Ainda está com alguma dúvida?</h2>
+        <p class="reveal">Converse comigo pelo WhatsApp.</p>
+        <a class="btn btn-whatsapp reveal" href="https://api.whatsapp.com/send?phone=31996663299" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 18. FOOTER ============ -->
+  <footer>
+    <div class="container">
+      <img src="logo parto ativo branco.png" alt="Parto Ativo" class="footer-logo">
+      <nav class="footer-links" aria-label="Links do rodapé">
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos de Uso</a>
+      </nav>
+      <p class="footer-copy">© <span id="year"></span> — Todos os Direitos Reservados</p>
+      <p class="footer-disclaimer">Este treinamento possui caráter educacional e não substitui acompanhamento médico, obstétrico, fisioterapêutico ou recomendações individualizadas fornecidas por profissionais de saúde.</p>
+    </div>
+  </footer>
+
+  <!-- Sticky CTA mobile -->
+  <div class="sticky-cta" id="stickyCta">
+    <a class="btn" href="https://pay.hotmart.com/W79517181N?off=9f0wvm5w" target="_blank" rel="noopener">Quero conhecer o Parto Ativo</a>
+  </div>
+
+  <script>
+    // ============================================================
+    // CONFIGURAÇÃO — edite aqui
+    // ============================================================
+
+    // Tempo (em segundos) até o CTA principal aparecer após o início da VSL.
+    // 0 = exibe imediatamente. Ex.: 30, 120, 300, 600
+    const VSL_CTA_DELAY = 0;
+
+    // URL do embed da VSL (YouTube, Vimeo, Hotmart...). Deixe vazio para manter o placeholder.
+    const VSL_EMBED_URL = "";
+
+    // ============================================================
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const heroCta = document.getElementById('heroCta');
+    const stickyCta = document.getElementById('stickyCta');
+    const vslPlayBtn = document.getElementById('vslPlayBtn');
+    const vslPlaceholder = document.getElementById('vslPlaceholder');
+    const vslEmbed = document.getElementById('vslEmbed');
+
+    let ctaShown = false;
+
+    function showCta() {
+      if (ctaShown) return;
+      ctaShown = true;
+      heroCta.classList.add('visible');
+    }
+
+    if (VSL_CTA_DELAY <= 0) {
+      showCta();
+    } else {
+      const startDelay = () => setTimeout(showCta, VSL_CTA_DELAY * 1000);
+      vslPlayBtn.addEventListener('click', startDelay, { once: true });
+      setTimeout(startDelay, VSL_CTA_DELAY * 1000);
+    }
+
+    if (VSL_EMBED_URL) {
+      vslPlayBtn.addEventListener('click', () => {
+        vslEmbed.src = VSL_EMBED_URL + (VSL_EMBED_URL.includes('?') ? '&' : '?') + 'autoplay=1';
+        vslEmbed.classList.add('active');
+        vslPlaceholder.style.display = 'none';
+      }, { once: true });
+    }
+
+    // Sticky CTA mobile: exibe após ultrapassar a âncora pós-VSL
+    const anchorObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          stickyCta.classList.add('visible');
+        }
+      });
+    }, { threshold: 0 });
+    anchorObserver.observe(document.getElementById('vslEndAnchor'));
+
+    // Animações de entrada
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Barra de progresso de leitura
+    const progressBar = document.getElementById('scrollProgress');
+    let ticking = false;
+
+    function updateProgress() {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = scrollable > 0 ? Math.min(scrollTop / scrollable, 1) : 0;
+      progressBar.style.transform = 'scaleX(' + pct + ')';
+      progressBar.setAttribute('aria-valuenow', Math.round(pct * 100));
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(updateProgress);
+      }
+    }, { passive: true });
+
+    window.addEventListener('resize', updateProgress, { passive: true });
+    updateProgress();
+  </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/vsl", "destination": "/vsl/index.html" }
+  ]
+}
