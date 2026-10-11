@@ -112,6 +112,8 @@ summary{transition:color .2s ease}summary:hover{color:#706087}
 .bonus-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
 .bonus-grid article{display:block;min-height:0;padding:0;background:transparent;border:0;border-radius:12px;box-shadow:none}
 .bonus-grid article img{width:100%;height:auto;object-fit:contain}
+.bonus-grid article h3{margin:18px 0 8px}
+.bonus-grid article p{color:var(--muted);line-height:1.7;margin:0}
 .bonus-grid article:hover{animation:none;transform:translateY(-3px);box-shadow:none}
 @media(max-width:760px){.bonus-grid{grid-template-columns:1fr;gap:18px}}
 .about-portrait{position:relative}

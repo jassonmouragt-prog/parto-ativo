@@ -25,3 +25,9 @@ Produção: https://partoativo.vercel.app
 - Imagens locais do hero, seção da Samia, mockup, cards e favicon.
 
 Os documentos legais ainda estão identificados como pendentes de validação. A landing page permanece com `noindex, nofollow` até a revisão final de conteúdo e documentação legal.
+
+## Revisão de copy — outubro de 2026
+
+A página principal e `vsl/index.html` apresentam os pilares e bônus com seus benefícios práticos. Os depoimentos vazios foram removidos até existirem relatos autorizados. A VSL foi recuperada da página publicada, junto às imagens. Acesse `/vsl/` na prévia local.
+
+O player fica oculto enquanto `VSL_EMBED_URL` estiver vazio em `vsl/index.html`. Inserir o link de incorporação real e verificar a reprodução antes de enviar tráfego. Materiais, pré-requisitos e regras de compartilhamento do FAQ ainda dependem da responsável; as respostas orientam a confirmar essas condições antes da compra.
