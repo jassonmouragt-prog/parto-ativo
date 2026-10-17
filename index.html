@@ -268,7 +268,7 @@
     }
 
     /* ---------- Promessa / Identificação ---------- */
-    .promessa { background: var(--cream); }
+    .promessa { background: var(--cream); padding-bottom: 40px; }
 
     .promessa .lead {
       font-family: var(--font-title);
@@ -320,7 +320,7 @@
     }
 
     /* ---------- 3 Pilares ---------- */
-    .pilares { background: var(--cream); }
+    .pilares { background: var(--cream); padding-top: 40px; }
 
     .pilares-grid {
       display: grid;
@@ -493,7 +493,7 @@
       display: block;
     }
 
-    /* ---------- O que ela aprende ---------- */
+    /* ---------- O que você vai aprender ---------- */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -638,51 +638,6 @@
 
     @media (max-width: 640px) {
       .bonus-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ---------- Depoimentos ---------- */
-    .depoimentos .section-sub { margin-bottom: 48px; }
-
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .testimonial {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 30px 28px;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid rgba(0, 74, 173, 0.08);
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .testimonial-video {
-      aspect-ratio: 16 / 9;
-      border-radius: var(--radius-sm);
-      background: linear-gradient(135deg, var(--dark), #1A3048);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(255,255,255,0.7);
-      font-size: 13px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .testimonial-text {
-      font-size: 15.5px;
-      color: var(--text);
-      font-style: italic;
-    }
-
-    .testimonial-author {
-      font-size: 13.5px;
-      font-weight: 600;
-      color: var(--blue);
     }
 
     /* ---------- Acesso 1 ano ---------- */
@@ -1051,6 +1006,8 @@
     /* ---------- Responsivo ---------- */
     @media (max-width: 860px) {
       section { padding: 64px 0; }
+      .promessa { padding-bottom: 28px; }
+      .pilares { padding-top: 28px; }
       .hero { padding: 48px 0 48px; }
       .produto-grid { grid-template-columns: 1fr; gap: 40px; }
       .desejos-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1114,7 +1071,7 @@
       </div>
 
       <div class="hero-cta" id="heroCta">
-        <a class="btn btn-xl" href="https://pay.hotmart.com/W79517181N?off=9f0wvm5w" target="_blank" rel="noopener">Quero conhecer o Parto Ativo</a>
+        <a class="btn btn-xl" href="https://pay.hotmart.com/W79517181N?off=9f0wvm5w" target="_blank" rel="noopener">Quero um parto sem dores</a>
         <p class="microcopy">Acesso online • Compra segura pela Hotmart • 7 dias de garantia</p>
       </div>
     </div>
@@ -1153,7 +1110,7 @@
         <div class="pilares-grid">
           <div class="pilar-card reveal">
             <div class="pilar-image">
-              <img src="exercicios mobilidade.jpeg" alt="Exercícios de mobilidade" loading="lazy">
+              <img src="novas imagens cards/mobilidade.jpeg" alt="Exercícios de mobilidade" loading="lazy">
             </div>
             <span class="pilar-number">01</span>
             <h3>Mobilidade</h3>
@@ -1161,7 +1118,7 @@
           </div>
           <div class="pilar-card reveal">
             <div class="pilar-image">
-              <img src="exercicios respiração.jpeg" alt="Técnicas de respiração e ativação" loading="lazy">
+              <img src="novas imagens cards/respiração.jpeg" alt="Técnicas de respiração e ativação" loading="lazy">
             </div>
             <span class="pilar-number">02</span>
             <h3>Respiração + Ativação</h3>
@@ -1169,7 +1126,7 @@
           </div>
           <div class="pilar-card reveal">
             <div class="pilar-image">
-              <img src="exercicios realizar com seu parceiro.webp" alt="Exercícios com acompanhante" loading="lazy">
+              <img src="novas imagens cards/companheiro.jpeg" alt="Exercícios com acompanhante" loading="lazy">
             </div>
             <span class="pilar-number">03</span>
             <h3>Com seu acompanhante</h3>
@@ -1234,7 +1191,7 @@
     <section>
       <div class="container">
         <div class="center">
-          <h2 class="section-title reveal">O que ela aprende</h2>
+          <h2 class="section-title reveal">O que você vai aprender para ter um parto mais rápido e com menos dores.</h2>
         </div>
         <div class="cards">
           <div class="card reveal">
@@ -1308,32 +1265,6 @@
             </div>
             <h3>Suporte 24 horas</h3>
             <p>Suporte 24 horas para dúvidas</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 13. DEPOIMENTOS ============ -->
-    <section class="depoimentos">
-      <div class="container">
-        <div class="center">
-          <h2 class="section-title reveal">Experiências de quem decidiu se preparar</h2>
-        </div>
-        <div class="testimonials">
-          <div class="testimonial reveal">
-            <div class="testimonial-video">[Depoimento em vídeo 01]</div>
-            <p class="testimonial-text">[Depoimento real 01]</p>
-            <span class="testimonial-author">[Nome]</span>
-          </div>
-          <div class="testimonial reveal">
-            <div class="testimonial-video">[Depoimento em vídeo 02]</div>
-            <p class="testimonial-text">[Depoimento real 02]</p>
-            <span class="testimonial-author">[Nome]</span>
-          </div>
-          <div class="testimonial reveal">
-            <div class="testimonial-video">[Depoimento em vídeo 03]</div>
-            <p class="testimonial-text">[Depoimento real 03]</p>
-            <span class="testimonial-author">[Nome]</span>
           </div>
         </div>
       </div>
@@ -1439,7 +1370,7 @@
 
   <!-- Sticky CTA mobile -->
   <div class="sticky-cta" id="stickyCta">
-    <a class="btn" href="https://pay.hotmart.com/W79517181N?off=9f0wvm5w" target="_blank" rel="noopener">Quero conhecer o Parto Ativo</a>
+    <a class="btn" href="https://pay.hotmart.com/W79517181N?off=9f0wvm5w" target="_blank" rel="noopener">Quero um parto mais rápido</a>
   </div>
 
   <script>
