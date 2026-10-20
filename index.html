@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parto Ativo — Aprenda como ter um parto mais rápido e com menos dores</title>
   <meta name="description" content="Exercícios de mobilidade, técnicas de respiração e ativação e práticas para realizar sozinha ou com seu acompanhante durante a preparação para o trabalho de parto.">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/pt_BR/fbevents.js');
+  fbq('init', '288234666697954');
+  fbq('track', 'PageView');
+  fbq('track', 'ViewContent', { content_name: 'VSL - Parto Ativo' });
+  fbq('trackCustom', 'TEST14930');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=288234666697954&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
   <meta property="og:title" content="Parto Ativo — Samia Tolentino">
   <meta property="og:description" content="Aprenda como se preparar para um parto mais rápido e com menos dores, de maneira simples.">
   <meta property="og:type" content="website">
@@ -1460,6 +1479,61 @@
       s.async = true;
       document.head.appendChild(s);
     })();
+  </script>
+  <!-- Meta Pixel - VSL Events (Converte.ai) -->
+  <script>
+    window.addEventListener('load', function() {
+      let played = false, p25 = false, p50 = false, p75 = false, completed = false;
+
+      function trackVideo(event, params) {
+        try {
+          if (typeof fbq === 'function') {
+            fbq('trackCustom', event, params || {});
+          }
+        } catch (e) {}
+      }
+
+      window.addEventListener('message', function(e) {
+        try {
+          const d = e.data;
+          if (!d || typeof d !== 'object') return;
+
+          if (d.type === 'converteai:video:play' || d.event === 'play' || d.action === 'play') {
+            if (!played) {
+              played = true;
+              trackVideo('VSL_Play');
+            }
+          }
+
+          if (d.type === 'converteai:video:progress' || d.event === 'progress') {
+            const t = d.currentTime || d.time || d.seconds || 0;
+            const dur = d.duration || d.totalTime || d.total || 0;
+            if (dur > 0) {
+              const pct = (t / dur) * 100;
+              if (pct >= 25 && !p25) {
+                p25 = true;
+                trackVideo('VSL_25');
+              }
+              if (pct >= 50 && !p50) {
+                p50 = true;
+                trackVideo('VSL_50');
+              }
+              if (pct >= 75 && !p75) {
+                p75 = true;
+                trackVideo('VSL_75');
+              }
+            }
+          }
+
+          if (d.type === 'converteai:video:ended' || d.event === 'ended' || d.event === 'complete' || d.type === 'converteai:video:complete') {
+            if (!completed) {
+              completed = true;
+              trackVideo('VSL_Complete');
+            }
+          }
+        } catch (err) {}
+      });
+    });
   </script>
 </body>
 </html>
